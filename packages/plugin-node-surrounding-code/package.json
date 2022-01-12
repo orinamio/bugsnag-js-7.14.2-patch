@@ -1,0 +1,30 @@
+{
+  "name": "@bugsnag/plugin-node-surrounding-code",
+  "version": "7.14.0",
+  "main": "surrounding-code.js",
+  "description": "@bugsnag/js plugin to load surrounding code in Node stacktraces",
+  "homepage": "https://www.bugsnag.com/",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bugsnag/bugsnag-js.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "*.js"
+  ],
+  "scripts": {},
+  "author": "Bugsnag",
+  "license": "MIT",
+  "dependencies": {
+    "byline": "^5.0.0",
+    "pump": "^3.0.0"
+  },
+  "devDependencies": {
+    "@bugsnag/core": "^7.14.0"
+  },
+  "peerDependencies": {
+    "@bugsnag/core": "^7.0.0"
+  }
+}

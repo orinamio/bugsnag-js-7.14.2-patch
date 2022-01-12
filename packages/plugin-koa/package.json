@@ -1,0 +1,37 @@
+{
+  "name": "@bugsnag/plugin-koa",
+  "version": "7.14.0",
+  "main": "dist/bugsnag-koa.js",
+  "types": "types/bugsnag-koa.d.ts",
+  "description": "@bugsnag/js error handling middleware for Koa web servers",
+  "homepage": "https://www.bugsnag.com/",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bugsnag/bugsnag-js.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "scripts": {
+    "clean": "rm -fr dist && mkdir dist",
+    "build": "npm run clean && npm run build:dist",
+    "build:dist": "../../bin/bundle src/koa.js --node --exclude=iserror --standalone=bugsnag-koa | ../../bin/extract-source-map dist/bugsnag-koa.js",
+    "postversion": "npm run build"
+  },
+  "author": "Bugsnag",
+  "license": "MIT",
+  "peerDependencies": {
+    "@bugsnag/core": "^7.0.0"
+  },
+  "devDependencies": {
+    "@bugsnag/core": "^7.14.0",
+    "@types/koa": "^2.11.3"
+  },
+  "dependencies": {
+    "iserror": "^0.0.2"
+  }
+}

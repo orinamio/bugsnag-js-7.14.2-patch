@@ -1,0 +1,37 @@
+{
+  "name": "@bugsnag/plugin-restify",
+  "version": "7.14.0",
+  "main": "dist/bugsnag-restify.js",
+  "types": "types/bugsnag-restify.d.ts",
+  "description": "@bugsnag/js error handling middleware for Restify web servers",
+  "homepage": "https://www.bugsnag.com/",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bugsnag/bugsnag-js.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "scripts": {
+    "clean": "rm -fr dist && mkdir dist",
+    "build": "npm run clean && npm run build:dist",
+    "build:dist": "../../bin/bundle src/restify.js --node --exclude=iserror --standalone=bugsnag-restify | ../../bin/extract-source-map dist/bugsnag-restify.js",
+    "postversion": "npm run build"
+  },
+  "author": "Bugsnag",
+  "license": "MIT",
+  "peerDependencies": {
+    "@bugsnag/core": "^7.0.0"
+  },
+  "devDependencies": {
+    "@bugsnag/core": "^7.14.0",
+    "@types/restify": "^8.4.2"
+  },
+  "dependencies": {
+    "iserror": "^0.0.2"
+  }
+}

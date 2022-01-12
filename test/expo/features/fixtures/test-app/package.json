@@ -1,0 +1,24 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.4.2",
+    "expo": "^37.0.0",
+    "expo-cli": "^3.17.5",
+    "expo-screen-orientation": "2.1.0",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.0.tar.gz",
+    "react-native-web": "^0.11.7",
+    "scheduler": "^0.14.0"
+  },
+  "devDependencies": {
+    "babel-preset-expo": "^8.1.0"
+  },
+  "private": true
+}

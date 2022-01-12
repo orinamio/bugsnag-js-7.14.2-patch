@@ -1,0 +1,28 @@
+{
+  "name": "@bugsnag/plugin-browser-device",
+  "version": "7.14.0",
+  "main": "device.js",
+  "description": "@bugsnag/js plugin to set device info in browsers",
+  "homepage": "https://www.bugsnag.com/",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bugsnag/bugsnag-js.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "*.js"
+  ],
+  "author": "Bugsnag",
+  "license": "MIT",
+  "dependencies": {
+    "@bugsnag/cuid": "^3.0.0"
+  },
+  "devDependencies": {
+    "@bugsnag/core": "^7.14.0"
+  },
+  "peerDependencies": {
+    "@bugsnag/core": "^7.0.0"
+  }
+}
